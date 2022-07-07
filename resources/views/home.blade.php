@@ -4,8 +4,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            @for ($i=0;$i<10;$i++)
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">{{ __('Dashboard') }}TITLE</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -15,8 +16,10 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    CONTENT
                 </div>
             </div>
+            @endfor
         </div>
     </div>
 </div>
