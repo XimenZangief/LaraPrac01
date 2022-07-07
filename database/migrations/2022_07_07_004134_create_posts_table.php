@@ -15,7 +15,15 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            
+            // 標題限制長度
+            $table->string('title',200);
+            $table->text('content');
+            // 發文者的user_id
+            $table->integer('user_id');
+            
             $table->timestamps();
+
         });
     }
 

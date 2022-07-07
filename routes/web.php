@@ -23,3 +23,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// middleware('auth')此控制器內所有函數都必須在登入狀態下才可使用
+Route::resource('/post',App\Http\Controllers\PostController::class)->middleware('auth');
